@@ -13,3 +13,22 @@ function addSquare(res) {
 
   container.appendChild(div);
 }
+
+function resetContainer() {
+  const container = document.querySelector(".container");
+  const currentSquares = document.querySelectorAll(".square");
+
+  currentSquares.forEach((square) => {
+    container.removeChild(square);
+  });
+}
+
+function populateContainer(res) {
+  resetContainer();
+
+  const totalSquares = res ** 2;
+
+  for (let i = 0; i < totalSquares; i++) {
+    addSquare(res);
+  }
+}
