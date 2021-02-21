@@ -23,6 +23,20 @@ function resetContainer() {
   });
 }
 
+function changeMono(square) {
+  square.style.backgroundColor = "#000000";
+}
+
+function addListeners() {
+  const squares = document.querySelectorAll(".square");
+
+  squares.forEach((square) => {
+    square.addEventListener("mouseover", () => {
+      changeMono(square);
+    });
+  });
+}
+
 function populateContainer(res) {
   resetContainer();
 
