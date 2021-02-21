@@ -45,4 +45,6 @@ function populateContainer(res) {
   for (let i = 0; i < totalSquares; i++) {
     addSquare(res);
   }
+
+  addListeners();
 }
