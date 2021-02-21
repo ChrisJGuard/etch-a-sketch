@@ -9,5 +9,6 @@
 }
 
 .square {
+  background-color: #fdfdfd;
   outline: 1px solid black;
 }
