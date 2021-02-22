@@ -70,7 +70,7 @@ function addToolboxListeners() {
   const checkbox = document.querySelector("#shading");
 
   slider.addEventListener("mousemove", () => {
-    label.textContent = "Grid Size: " + slider.value + " x " + slider.value;
+    label.textContent = "grid size: " + slider.value + " x " + slider.value;
   });
 
   button.addEventListener("mouseup", () => {

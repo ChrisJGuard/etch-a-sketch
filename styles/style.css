@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
-h1 {
+body {
+  background-color: rgb(185, 35, 35);
+  color: rgb(225, 210, 75);
   font-family: "DotGothic16", sans-serif;
+}
+
+h1 {
   font-size: 3rem;
   text-align: center;
   margin: 0.5em;
@@ -10,7 +15,7 @@ h1 {
 .container {
   height: 400px;
   width: 400px;
-  border: 1px solid black;
+  border: 10px groove darkgrey;
   margin: 0 auto;
   display: flex;
   align-content: flex-start;
@@ -23,8 +28,7 @@ h1 {
 }
 
 .toolbox {
-  font-family: "DotGothic16", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   height: 40px;
   width: 376px;
   margin: 0.5em auto;
