@@ -21,3 +21,10 @@ h1 {
   background-color: #ffffff;
   outline: 1px solid black;
 }
+
+.toolbox {
+  height: 40px;
+  width: 400px;
+  border: 1px solid black;
+  margin: 0.5em auto;
+}

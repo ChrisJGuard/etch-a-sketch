@@ -27,13 +27,27 @@ function changeMono(square) {
   square.style.backgroundColor = "#000000";
 }
 
-function addListeners() {
+function addSquareListeners() {
   const squares = document.querySelectorAll(".square");
 
   squares.forEach((square) => {
     square.addEventListener("mouseover", () => {
       changeMono(square);
     });
+  });
+}
+
+function addToolboxListeners() {
+  const slider = document.querySelector("#slider");
+  const label = document.querySelector('label[for="slider"]');
+  const button = document.querySelector("button");
+
+  slider.addEventListener("mousemove", () => {
+    label.textContent = "Grid Size: " + slider.value + "x" + slider.value;
+  });
+
+  button.addEventListener("mouseup", () => {
+    populateContainer(slider.value);
   });
 }
 
@@ -46,5 +60,7 @@ function populateContainer(res) {
     addSquare(res);
   }
 
-  addListeners();
+  addSquareListeners();
 }
+
+addToolboxListeners();
