@@ -66,6 +66,8 @@ function addToolboxListeners() {
   const slider = document.querySelector("#slider");
   const label = document.querySelector('label[for="slider"]');
   const button = document.querySelector("button");
+  const radios = document.querySelectorAll('input[type="radio"]');
+  const checkbox = document.querySelector("#shading");
 
   slider.addEventListener("mousemove", () => {
     label.textContent = "Grid Size: " + slider.value + " x " + slider.value;
@@ -73,6 +75,12 @@ function addToolboxListeners() {
 
   button.addEventListener("mouseup", () => {
     populateContainer(slider.value);
+  });
+
+  radios.forEach((radio) => {
+    radio.addEventListener("change", () => {
+      checkbox.toggleAttribute("disabled");
+    });
   });
 }
 
