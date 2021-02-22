@@ -34,6 +34,15 @@ h1 {
   align-items: center;
 }
 
+.toolbox-component {
+  display: flex;
+  align-items: center;
+}
+
 button {
   font-family: "DotGothic16", sans-serif;
+}
+
+label {
+  margin: 0 1em;
 }
