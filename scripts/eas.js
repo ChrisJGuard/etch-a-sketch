@@ -37,6 +37,10 @@ function changeColor(square) {
   const blue = generateRGBValue();
 
   const computed = window.getComputedStyle(square);
+  if (computed.backgroundColor === "rgb(0, 0, 0)") {
+    square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    return;
+  }
   if (computed.backgroundColor !== "rgb(255, 255, 255)") return;
 
   square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
