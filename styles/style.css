@@ -16,7 +16,7 @@ h1 {
   height: 400px;
   width: 400px;
   border: 10px groove darkgrey;
-  margin: 0 auto;
+  margin: 0 auto 1em auto;
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
@@ -31,7 +31,7 @@ h1 {
   font-size: 0.8rem;
   height: 40px;
   width: 376px;
-  margin: 0.5em auto;
+  margin: 0 auto 0.375em auto;
   padding: 0 1em;
   display: flex;
   justify-content: space-around;
