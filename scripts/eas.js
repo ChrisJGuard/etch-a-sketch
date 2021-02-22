@@ -23,8 +23,20 @@ function resetContainer() {
   });
 }
 
+function generateRGBValue() {
+  return Math.floor(Math.random() * 256);
+}
+
 function changeMono(square) {
   square.style.backgroundColor = "#000000";
+}
+
+function changeColor(square) {
+  const red = generateRGBValue();
+  const green = generateRGBValue();
+  const blue = generateRGBValue();
+
+  square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
 
 function addSquareListeners() {
