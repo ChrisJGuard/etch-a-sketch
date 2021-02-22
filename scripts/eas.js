@@ -28,7 +28,7 @@ function generateRGBValue() {
 }
 
 function changeMono(square) {
-  square.style.backgroundColor = "#000000";
+  square.style.backgroundColor = "rgb(0,0,0)";
 }
 
 function changeColor(square) {
@@ -66,8 +66,6 @@ function addToolboxListeners() {
   const slider = document.querySelector("#slider");
   const label = document.querySelector('label[for="slider"]');
   const button = document.querySelector("button");
-  const radios = document.querySelectorAll('input[type="radio"]');
-  const checkbox = document.querySelector("#shading");
 
   slider.addEventListener("mousemove", () => {
     label.textContent = "grid size: " + slider.value + " x " + slider.value;
@@ -75,12 +73,6 @@ function addToolboxListeners() {
 
   button.addEventListener("mouseup", () => {
     populateContainer(slider.value);
-  });
-
-  radios.forEach((radio) => {
-    radio.addEventListener("change", () => {
-      checkbox.toggleAttribute("disabled");
-    });
   });
 }
 
