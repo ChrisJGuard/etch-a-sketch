@@ -78,6 +78,10 @@ function addToolboxListeners() {
     label.textContent = "grid size: " + slider.value + " x " + slider.value;
   });
 
+  slider.addEventListener("change", () => {
+    label.textContent = "grid size: " + slider.value + " x " + slider.value;
+  });
+
   button.addEventListener("mouseup", () => {
     populateContainer(slider.value);
   });
