@@ -57,7 +57,7 @@ function addSquareListeners() {
 
   squares.forEach((square) => {
     square.addEventListener("mouseover", () => {
-      changeMono(square);
+      changeSquare(square);
     });
   });
 }
