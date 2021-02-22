@@ -43,7 +43,7 @@ function addToolboxListeners() {
   const button = document.querySelector("button");
 
   slider.addEventListener("mousemove", () => {
-    label.textContent = "Grid Size: " + slider.value + "x" + slider.value;
+    label.textContent = "Grid Size: " + slider.value + " x " + slider.value;
   });
 
   button.addEventListener("mouseup", () => {
