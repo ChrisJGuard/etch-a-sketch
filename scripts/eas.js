@@ -39,6 +39,19 @@ function changeColor(square) {
   square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
 
+function changeSquare(square) {
+  const mono = document.querySelector("#mono").checked;
+  const rgb = document.querySelector("#rgb").checked;
+
+  if (mono) {
+    changeMono(square);
+  }
+
+  if (rgb) {
+    changeColor(square);
+  }
+}
+
 function addSquareListeners() {
   const squares = document.querySelectorAll(".square");
 
