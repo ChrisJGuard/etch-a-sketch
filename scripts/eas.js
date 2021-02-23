@@ -59,6 +59,14 @@ function changeSquare(square) {
   }
 }
 
+function showGuide() {
+  const squares = document.querySelectorAll(".square");
+
+  squares.forEach((square) => {
+    square.classList.toggle("guide");
+  });
+}
+
 function addSquareListeners() {
   const squares = document.querySelectorAll(".square");
 
@@ -73,6 +81,7 @@ function addToolboxListeners() {
   const slider = document.querySelector("#slider");
   const label = document.querySelector('label[for="slider"]');
   const button = document.querySelector("button");
+  const checkbox = document.querySelector('input[type="checkbox"');
 
   slider.addEventListener("mousemove", () => {
     label.textContent = "grid size: " + slider.value + " x " + slider.value;
@@ -84,6 +93,11 @@ function addToolboxListeners() {
 
   button.addEventListener("mouseup", () => {
     populateContainer(slider.value);
+    if (checkbox.checked) showGuide();
+  });
+
+  checkbox.addEventListener("change", () => {
+    showGuide();
   });
 }
 

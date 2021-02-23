@@ -24,6 +24,9 @@ h1 {
 
 .square {
   background-color: #ffffff;
+}
+
+.guide {
   outline: 1px solid black;
 }
 
